@@ -64,6 +64,7 @@ export default {
         },
         //* fulltek colors
         fulltek: {
+          background: "#FFFFFF",
           primary: {
             DEFAULT: "#00CA7C", // corrected brand green (sampled from logo)
             light: "#F2FCF8", // corrected light / hover / message bg

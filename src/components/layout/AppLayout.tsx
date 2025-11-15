@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import SideBar from "./SideBar";
+import Header from "./Header";
 
 export const AppLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+    <div className="min-h-screen flex flex-row flex-nowrap bg-background bg-fulltek-background">
+      <SideBar />
       <main className="flex-1">
+        <Header />
         <Outlet />
       </main>
-      <Footer />
     </div>
   );
 };
