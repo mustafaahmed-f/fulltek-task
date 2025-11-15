@@ -3,6 +3,7 @@ import { AppLayout } from "./components/layout/AppLayout";
 import { HomePage } from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFound";
 import { Providers } from "./providers";
+import "./i18n";
 
 const App = () => (
   <Providers>

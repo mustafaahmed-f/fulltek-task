@@ -1,1 +1,11 @@
-{}
+{
+  "Board": "Board",
+  "Customers": "Customers",
+  "Contracts": "Contracts",
+  "HR": "HR",
+  "Projects": "Projects",
+  "Finance": "Finance",
+  "Calender": "Calender",
+  "Orders": "Orders",
+  "Settings": "Settings"
+}

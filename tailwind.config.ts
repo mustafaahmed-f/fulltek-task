@@ -74,7 +74,7 @@ export default {
 
           sidebar: {
             background: "#F9FAFB",
-            border: "#E5E7EB",
+            border: "#E2E8F0",
             icon: "#6B7280",
             active: "#E3F7F3",
             "active-icon": "#00CA7C", // corrected
