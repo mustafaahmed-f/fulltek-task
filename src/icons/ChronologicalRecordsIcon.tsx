@@ -19,8 +19,8 @@ function ChronologicalRecordsIcon({
       <path
         d="M0.5 15.5V0.5L7.5 4.25L0.5 8"
         stroke={isActive ? "#00CA7C" : "#98A2B2"}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

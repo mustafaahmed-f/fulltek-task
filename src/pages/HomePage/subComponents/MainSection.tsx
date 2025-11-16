@@ -44,7 +44,7 @@ function MainSection({ activeTicket }: MainSectionProps) {
         className="relative h-full w-full min-w-0 overflow-hidden"
       >
         <ResizablePanel className="h-full w-full min-w-0">
-          <TicketConversation />
+          <TicketConversation activeTicket={activeTicket} />
         </ResizablePanel>
 
         <ResizableHandle />

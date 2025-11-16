@@ -14,7 +14,7 @@ function LeftArrow({}: LeftArrowProps) {
       <path
         d="M14.34 6.75L9.75 11.7573L14.49 16.92"
         stroke="#475370"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
     </svg>
   );

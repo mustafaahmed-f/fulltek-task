@@ -16,7 +16,11 @@ function TicketOptionDetails({}: TicketOptionDetailsProps) {
       </div>
       <div className="mb-10 flex flex-col gap-5 p-3">
         {RecordsArray.map((record, i) => (
-          <SingleRecord {...record} isLast={i === RecordsArray.length - 1} />
+          <SingleRecord
+            {...record}
+            isLast={i === RecordsArray.length - 1}
+            key={record.id}
+          />
         ))}
       </div>
     </div>
