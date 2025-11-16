@@ -12,7 +12,7 @@ function TicketOptions({}: TicketOptionsProps) {
   const { t, i18n } = useTranslation();
   return (
     <div
-      className={`flex min-w-[71px] flex-col items-center gap-2 px-2 py-5 ${i18n.language === "ar" ? "border-r-2 border-r-fulltek-sidebar-border" : "border-l-2 border-l-fulltek-sidebar-border"}`}
+      className={`flex w-[71px] flex-col items-center gap-2 px-2 py-5 ${i18n.language === "ar" ? "border-r-2 border-r-fulltek-sidebar-border" : "border-l-2 border-l-fulltek-sidebar-border"}`}
     >
       <TicketSingleOption title={t("Actions")}>
         <ActionsIcon />

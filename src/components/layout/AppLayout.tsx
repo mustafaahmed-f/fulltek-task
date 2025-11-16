@@ -7,15 +7,19 @@ import {
 import Header from "./Header";
 import SideBar from "./SideBar";
 import { useEffect, useState } from "react";
+import { pxToPercent } from "@/utils/pxToPercent";
+import RightArrow from "@/icons/RightArrow";
+import LeftArrow from "@/icons/LeftArrow";
 
 export const AppLayout = () => {
-  const pxToPercent = (px: number) => (px / window.innerWidth) * 100;
   const [defaultSize, setDefaultSize] = useState(Math.floor(pxToPercent(260)));
   const [minSize, setMinSize] = useState(Math.floor(pxToPercent(84)));
+  const [panelSize, setPanelSize] = useState(defaultSize);
 
-  // const defaultSize = Math.floor(pxToPercent(260));
-
-  // const minSize = Math.floor(pxToPercent(84));
+  // toggle function
+  const togglePanel = () => {
+    setPanelSize((prev) => (prev === minSize ? defaultSize : minSize));
+  };
 
   //* This allows responsiveness
   useEffect(() => {
@@ -31,21 +35,30 @@ export const AppLayout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen h-full flex flex-row flex-nowrap bg-background bg-fulltek-background">
+    <div className="flex h-full min-h-screen flex-row flex-nowrap bg-background bg-fulltek-background">
       <ResizablePanelGroup
         direction="horizontal"
-        className="w-full h-full min-w-0 overflow-hidden"
+        className="relative h-full w-full min-w-0 overflow-hidden"
       >
         <ResizablePanel
-          defaultSize={defaultSize}
+          defaultSize={panelSize}
           maxSize={defaultSize}
           minSize={minSize}
         >
           <SideBar />
         </ResizablePanel>
+        <div className="relative">
+          {/* The arrow button */}
+          <button
+            onClick={togglePanel}
+            className="/* Move slightly outside the handle */ absolute bottom-1/2 right-[-12px] z-50 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border bg-white shadow-md transition hover:bg-gray-100"
+          >
+            {panelSize === minSize ? <RightArrow /> : <LeftArrow />}
+          </button>
+        </div>
         <ResizableHandle />
-        <ResizablePanel className="w-full h-full min-w-0">
-          <main className="flex-1 h-full overflow-auto">
+        <ResizablePanel className="h-full w-full min-w-0">
+          <main className="h-full flex-1 overflow-auto">
             <Header />
             <Outlet />
           </main>
