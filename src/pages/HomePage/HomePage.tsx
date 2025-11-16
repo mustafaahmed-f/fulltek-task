@@ -10,6 +10,7 @@ import { ArrowRight, Code, Layers, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import TicketsTabs from "./subComponents/TicketsTabs";
 import { useState } from "react";
+import MainSection from "./subComponents/MainSection";
 
 export const HomePage = () => {
   const [activeTicket, setActiveTicket] = useState(1);
@@ -19,6 +20,7 @@ export const HomePage = () => {
         activeTicket={activeTicket}
         setActiveTicket={setActiveTicket}
       />
+      <MainSection activeTicket={activeTicket} />
     </div>
   );
 };

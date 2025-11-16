@@ -34,18 +34,18 @@ function SideBar({}: SideBarProps) {
 
   return (
     <div
-      className={`flex min-w-[86px] flex-row py-6 ${
+      className={`flex h-full min-w-[86px] flex-row py-6 ${
         i18n.language === "ar"
           ? "border-l-2 border-l-fulltek-sidebar-border"
           : "border-r-2 border-r-fulltek-sidebar-border"
       } `}
     >
       {/* //* Main SideBar */}
-      <div className="flex h-full min-h-screen w-[86px] flex-col items-center gap-2 px-6">
+      <div className="flex h-full min-h-screen w-[86px] flex-col items-center gap-4 px-6">
         <SideBarElement title="" className="">
           <MainLogo />
         </SideBarElement>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-4">
           <SideBarElement title={t("Board")}>
             <Board />
           </SideBarElement>

@@ -9,5 +9,13 @@
   "Orders": "Orders",
   "Settings": "Settings",
   "OrderNumber": "Order Number",
-  "SomethingWentWrong": "We are having a problem with the user interface not working"
+  "SomethingWentWrong": "We are having a problem with the user interface not working",
+  "Actions": "Actions",
+  "CommunicationData": "Communication data",
+  "LinkedTickets": "Linked tickets",
+  "Details": "Details",
+  "ChronologicalRecords": "Chronological Records",
+  "NewestOrder": "Newest Order",
+  "AM": "AM",
+  "PM": "PM"
 }

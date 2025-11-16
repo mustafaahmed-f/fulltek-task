@@ -9,5 +9,13 @@
   "Orders": "الطلبات",
   "Settings": "الإعدادات",
   "OrderNumber": "رقم الطلب",
-  "SomethingWentWrong": "نواجه مشكلة في عدم عمل واجهة المستخدم"
+  "SomethingWentWrong": "نواجه مشكلة في عدم عمل واجهة المستخدم",
+  "Actions": "الإجراءات",
+  "CommunicationData": "بيانات الاتصال",
+  "LinkedTickets": "التذاكر المرتبطة",
+  "Details": "التفاصيل",
+  "ChronologicalRecords": "السجلات الزمنية",
+  "NewestOrder": "أحدث الطلبات",
+  "AM": "ص",
+  "PM": "م"
 }

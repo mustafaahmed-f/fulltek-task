@@ -16,13 +16,13 @@ function SideBarElement({
   return (
     <div
       className={cn(
-        "flex flex-col gap-1 items-center cursor-pointer py-2 rounded-lg px-2 hover:bg-[#00CA7C0D]",
+        "flex cursor-pointer flex-col items-center gap-2 rounded-lg px-2 py-2 hover:bg-[#00CA7C0D]",
         isActive && "bg-[#00CA7C0D]",
-        className
+        className,
       )}
     >
       {children}
-      <span className="text-sm text-center ">{title}</span>
+      <span className="text-center text-sm">{title}</span>
     </div>
   );
 }
