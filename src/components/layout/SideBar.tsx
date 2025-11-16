@@ -34,14 +34,14 @@ function SideBar({}: SideBarProps) {
 
   return (
     <div
-      className={`flex flex-row py-6 relative min-w-[86px] ${
+      className={`flex min-w-[86px] flex-row py-6 ${
         i18n.language === "ar"
           ? "border-l-2 border-l-fulltek-sidebar-border"
           : "border-r-2 border-r-fulltek-sidebar-border"
       } `}
     >
       {/* //* Main SideBar */}
-      <div className="w-[86px] h-full flex flex-col items-center gap-2 px-6 min-h-screen">
+      <div className="flex h-full min-h-screen w-[86px] flex-col items-center gap-2 px-6">
         <SideBarElement title="" className="">
           <MainLogo />
         </SideBarElement>
@@ -75,19 +75,19 @@ function SideBar({}: SideBarProps) {
           </SideBarElement>
         </div>
         {/* <ImgVector /> */}
-        <div className="rounded-full border-[3px] border-fulltek-primary overflow-hidden w-12 h-12 flex justify-center">
+        <div className="flex h-12 w-12 justify-center overflow-hidden rounded-full border-[3px] border-fulltek-primary">
           <img
             src="../../../public/Man 1.png"
             alt="Man1"
-            className="object-cover rounded"
+            className="rounded object-cover"
           />
         </div>
       </div>
       {/* //* details section */}
       <div className="max-w-[174px]">
         <div
-          className={`py-2  border-b-2 border-b-fulltek-sidebar-border ${
-            i18n.language === "ar" ? "pr-4 pl-24" : "pl-4 pr-24"
+          className={`border-b-2 border-b-fulltek-sidebar-border py-2 ${
+            i18n.language === "ar" ? "pl-24 pr-4" : "pl-4 pr-24"
           }`}
         >
           <p
@@ -98,7 +98,7 @@ function SideBar({}: SideBarProps) {
             {t("Orders")}
           </p>
         </div>
-        <div className="py-2 px-4 bg-fulltek-sidebar-background w-full">
+        <div className="w-full bg-fulltek-sidebar-background px-4 py-2">
           <p
             className={`w-full text-sm ${
               i18n.language === "ar" ? "text-right" : "text-left"

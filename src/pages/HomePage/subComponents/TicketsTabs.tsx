@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { Plus } from "lucide-react";
 import { tickets } from "../utils/TicketsArray";
 import SingleTab from "./SingleTab";
-import { Plus } from "lucide-react";
 
-interface TicketsTabsProps {}
+interface TicketsTabsProps {
+  activeTicket: number;
+  setActiveTicket: React.Dispatch<React.SetStateAction<number>>;
+}
 
-function TicketsTabs({}: TicketsTabsProps) {
-  const [activeTicket, setActiveTicket] = useState(1);
+function TicketsTabs({ activeTicket, setActiveTicket }: TicketsTabsProps) {
   return (
     <div className="flex w-full pe-2">
       <div className="flex w-fit items-center border-b-2 border-b-white">
