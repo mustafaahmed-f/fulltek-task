@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { ArrowRight, Code, Layers, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -8,34 +14,38 @@ export const HomePage = () => {
     {
       icon: Code,
       title: "Feature-Based Architecture",
-      description: "Organized code structure with features, components, and services for better maintainability."
+      description:
+        "Organized code structure with features, components, and services for better maintainability.",
     },
     {
       icon: Layers,
       title: "Modern Stack",
-      description: "Built with React, TypeScript, Tailwind CSS, Shadcn/ui, and Tanstack Query."
+      description:
+        "Built with React, TypeScript, Tailwind CSS, Shadcn/ui, and Tanstack Query.",
     },
     {
       icon: Zap,
       title: "Developer Ready",
-      description: "Pre-configured routing, providers, and folder structure to get you started quickly."
-    }
+      description:
+        "Pre-configured routing, providers, and folder structure to get you started quickly.",
+    },
   ];
 
   return (
-    <div className="container max-w-screen-2xl py-8">
+    <div className=" max-w-screen-2xl py-8 px-4 max-sm:overflow-x-scroll h-full">
       <div className="flex flex-col items-center text-center space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             React Template
           </h1>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            A modern React template with feature-based architecture, ready for enterprise applications.
-            Built with best practices and industry-standard tools.
+            A modern React template with feature-based architecture, ready for
+            enterprise applications. Built with best practices and
+            industry-standard tools.
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <Button asChild size="lg">
             <Link to="/about">
               Get Started
