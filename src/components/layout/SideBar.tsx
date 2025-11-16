@@ -87,7 +87,7 @@ function SideBar({}: SideBarProps) {
       <div className="max-w-[174px]">
         <div
           className={`py-2  border-b-2 border-b-fulltek-sidebar-border ${
-            i18n.language === "ar" ? "pr-4 pl-24" : "pl-4 pr-20"
+            i18n.language === "ar" ? "pr-4 pl-24" : "pl-4 pr-24"
           }`}
         >
           <p
