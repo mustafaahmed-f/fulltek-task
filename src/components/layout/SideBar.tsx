@@ -1,25 +1,40 @@
-import MainLogo from "@/icons/MainLogo";
-import SideBarElement from "./SideBarElement";
-import { useTranslation } from "react-i18next";
 import Board from "@/icons/Board";
-import Customers from "@/icons/Customers";
-import Orders from "@/icons/Orders";
-import Settings from "@/icons/Settings";
 import Calender from "@/icons/Calender";
-import Finance from "@/icons/Finance";
-import Projects from "@/icons/Projects";
-import HR from "@/icons/HR";
 import Contracts from "@/icons/Contracts";
-import ImgVector from "@/icons/ImgVector";
+import Customers from "@/icons/Customers";
+import Finance from "@/icons/Finance";
+import HR from "@/icons/HR";
+import MainLogo from "@/icons/MainLogo";
+import Orders from "@/icons/Orders";
+import Projects from "@/icons/Projects";
+import Settings from "@/icons/Settings";
+import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import SideBarElement from "./SideBarElement";
 
 interface SideBarProps {}
 
 function SideBar({}: SideBarProps) {
+  const defaultSize = 174;
+  const [isCollased, setIsCollased] = useState(false);
   const { t, i18n } = useTranslation();
-  console.log("Current language : ", i18n.language);
+  const panelRef = useRef<any>(null);
+
+  const toggleSidebar = () => {
+    if (!panelRef.current) return;
+
+    if (isCollased) {
+      panelRef.current.resize(30); // expand to defaultSize percent
+      setIsCollased(false);
+    } else {
+      panelRef.current.collapse(); // built-in collapse
+      setIsCollased(true);
+    }
+  };
+
   return (
     <div
-      className={`flex flex-row py-6  ${
+      className={`flex flex-row py-6 relative min-w-[86px] ${
         i18n.language === "ar"
           ? "border-l-2 border-l-fulltek-sidebar-border"
           : "border-r-2 border-r-fulltek-sidebar-border"
@@ -68,9 +83,13 @@ function SideBar({}: SideBarProps) {
           />
         </div>
       </div>
-      {/* //* resizable section */}
-      <div className="h-full w-[174px]">
-        <div className="py-2 px-4 border-b-2 border-b-fulltek-sidebar-border">
+      {/* //* details section */}
+      <div className="max-w-[174px]">
+        <div
+          className={`py-2  border-b-2 border-b-fulltek-sidebar-border ${
+            i18n.language === "ar" ? "pr-4 pl-24" : "pl-4 pr-20"
+          }`}
+        >
           <p
             className={`w-full text-lg font-semibold ${
               i18n.language === "ar" ? "text-right" : "text-left"
@@ -79,7 +98,7 @@ function SideBar({}: SideBarProps) {
             {t("Orders")}
           </p>
         </div>
-        <div className="py-2 px-4 bg-fulltek-sidebar-background">
+        <div className="py-2 px-4 bg-fulltek-sidebar-background w-full">
           <p
             className={`w-full text-sm ${
               i18n.language === "ar" ? "text-right" : "text-left"
