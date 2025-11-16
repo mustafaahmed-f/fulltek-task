@@ -7,5 +7,7 @@
   "Finance": "المالية",
   "Calender": "التقويم",
   "Orders": "الطلبات",
-  "Settings": "الإعدادات"
+  "Settings": "الإعدادات",
+  "OrderNumber": "رقم الطلب",
+  "SomethingWentWrong": "نواجه مشكلة في عدم عمل واجهة المستخدم"
 }

@@ -7,5 +7,7 @@
   "Finance": "Finance",
   "Calender": "Calender",
   "Orders": "Orders",
-  "Settings": "Settings"
+  "Settings": "Settings",
+  "OrderNumber": "Order Number",
+  "SomethingWentWrong": "We are having a problem with the user interface not working"
 }

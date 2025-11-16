@@ -65,9 +65,13 @@ export default {
         //* fulltek colors
         fulltek: {
           background: "#FFFFFF",
+          backgroundHover: "#00CA7C0D",
           primary: {
             DEFAULT: "#00CA7C", // corrected brand green (sampled from logo)
             light: "#F2FCF8", // corrected light / hover / message bg
+          },
+          text: {
+            grey: "#98A2B2",
           },
 
           // ... other zendesk colors remain the same
