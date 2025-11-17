@@ -1,24 +1,16 @@
-import { Plus } from "lucide-react";
-import { tickets } from "../utils/TicketsArray";
-import SingleTab from "./SingleTab";
-import { useRef } from "react";
-import { useAtom } from "jotai";
-import { tabsHeightAtom } from "@/atoms/LayoutAtoms";
 import { CurrentTicketAtom } from "@/atoms/CurrentTicketAtom";
 
-function TicketsTabs() {
-  const ticketsRef = useRef<HTMLDivElement>(null);
-  const [currentTicket, setCurrentTicket] = useAtom(CurrentTicketAtom);
-  const [tabsHeight, setTabsHeight] = useAtom(tabsHeightAtom);
+import { useAtom } from "jotai";
+import { Plus } from "lucide-react";
+import { useRef } from "react";
+import { tickets } from "../utils/TicketsArray";
+import SingleTab from "./SingleTab";
 
-  if (ticketsRef.current) {
-    setTabsHeight(ticketsRef.current.clientHeight);
-  }
+function TicketsTabs() {
+  const [currentTicket, setCurrentTicket] = useAtom(CurrentTicketAtom);
+
   return (
-    <div
-      ref={ticketsRef}
-      className="flex w-full min-w-0 overflow-x-auto pe-2 scrollbar-hide"
-    >
+    <div className="flex w-full min-w-0 overflow-x-auto pe-2 scrollbar-hide">
       <div className="flex w-fit items-center border-b-2 border-b-white">
         {tickets.map((ticket) => (
           <SingleTab
