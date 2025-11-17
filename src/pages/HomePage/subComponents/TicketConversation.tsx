@@ -18,7 +18,7 @@ function TicketConversation() {
   const addMessage = (text: string) => {
     setTickets((prev) =>
       prev.map((t) =>
-        t.id === activeTicket
+        Number(t.id) === activeTicket
           ? {
               ...t,
               messages: [
