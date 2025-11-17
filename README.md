@@ -69,6 +69,6 @@ The following issues are currently present:
 
 This project is deployed on **Netlify**:
 
-🚀 **Live Demo**: [https://your-netlify-deployment-url.netlify.app](https://your-netlify-deployment-url.netlify.app)
+🚀 **Live Demo**: [https://fulltektask.netlify.app/](https://fulltektask.netlify.app/)
 
 Replace the URL above with your actual Netlify deployment link.
