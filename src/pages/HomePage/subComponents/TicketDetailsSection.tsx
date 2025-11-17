@@ -8,7 +8,7 @@ interface TicketDetailsSectionProps {}
 function TicketDetailsSection({}: TicketDetailsSectionProps) {
   const { t, i18n } = useTranslation();
   return (
-    <div className={`flex h-full min-w-[71px] flex-row`}>
+    <div className={`flex h-full min-h-full min-w-[71px] flex-row`}>
       <TicketOptionDetails />
       <TicketOptions />
     </div>

@@ -1,16 +1,29 @@
+import { headerHeightAtom } from "@/atoms/LayoutAtoms";
 import DocumentIcon from "@/icons/DocumentIcon";
 import NotificationsIcon from "@/icons/NotificationsIcon";
 import PlusIcon from "@/icons/PlusIcon";
 import SearchIcon from "@/icons/SearchIcon";
 import TimerIcon from "@/icons/TimerIcon";
+import { useAtom } from "jotai";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 interface HeaderProps {}
 
 function Header({}: HeaderProps) {
   const { t, i18n } = useTranslation();
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [headerHeight, setHeaderHeight] = useAtom(headerHeightAtom);
+
+  if (headerRef.current) {
+    setHeaderHeight(headerRef.current.clientHeight);
+  }
+
   return (
-    <div className="sm:pt-8 pt-5 pb-2 px-4 max-sm:gap-y-3 sm:px-6 font-semibold text-lg border-b-2 border-b-fulltek-sidebar-border flex sm:flex-row flex-col justify-between items-center">
+    <div
+      ref={headerRef}
+      className="flex flex-col items-center justify-between border-b-2 border-b-fulltek-sidebar-border px-4 pb-2 pt-5 text-lg font-semibold max-sm:gap-y-3 sm:flex-row sm:px-6 sm:pt-5"
+    >
       <div>{t("Orders")}</div>
       <div className="flex items-center gap-4">
         <SearchIcon className="cursor-pointer" />
@@ -20,11 +33,11 @@ function Header({}: HeaderProps) {
         <div className="relative cursor-pointer">
           <NotificationsIcon />
           <div
-            className={`z-10 absolute top-0 -translate-y-3 ${
+            className={`absolute top-0 z-10 -translate-y-3 ${
               i18n.language === "ar"
                 ? "right-0 translate-x-2"
                 : "left-0 -translate-x-2"
-            } bg-fulltek-primary text-white rounded-md text-xs px-1 py-0.5`}
+            } rounded-md bg-fulltek-primary px-1 py-0.5 text-xs text-white`}
           >
             6
           </div>

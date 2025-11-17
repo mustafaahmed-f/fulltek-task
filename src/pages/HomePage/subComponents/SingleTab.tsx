@@ -24,7 +24,7 @@ function SingleTab({
   }
   return (
     <div
-      className={`flex max-w-[216px] cursor-pointer items-center justify-between gap-1 border-b-2 px-4 py-3 font-semibold ${
+      className={`flex max-w-[250px] cursor-pointer items-center justify-between gap-1 border-b-2 px-4 py-2 font-semibold ${
         i18n.language === "ar"
           ? "border-l-2 border-l-fulltek-sidebar-border"
           : "border-r-2 border-r-fulltek-sidebar-border"
@@ -33,13 +33,13 @@ function SingleTab({
     >
       <div className="flex flex-col items-start">
         <div
-          className={`max-w-[164px] overflow-hidden text-ellipsis whitespace-nowrap text-nowrap font-semibold ${
+          className={`max-w-[190px] overflow-hidden text-ellipsis whitespace-nowrap text-nowrap font-semibold ${
             isActive ? "text-black" : "text-fulltek-text-grey"
           }`}
         >
           {t(title)}
         </div>
-        <p className="text-xs text-fulltek-text-grey">
+        <p className="text-ellipsis text-xs text-fulltek-text-grey">
           {t("OrderNumber")} : <span>{orderNumber}</span>
         </p>
       </div>

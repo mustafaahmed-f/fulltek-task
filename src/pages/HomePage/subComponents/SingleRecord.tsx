@@ -35,15 +35,15 @@ function SingleRecord({
       </div>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-semibold">{t(title)}</p>
-          <div className="flex gap-2 text-sm text-[#7A8699]">
+          <p className="text-sm font-semibold">{t(title)}</p>
+          <div className="flex gap-2 text-xs text-[#7A8699]">
             <p>{date}</p>
             <p>
               {time} {t(timeType)}
             </p>
           </div>
         </div>
-        <div className="text-sm">
+        <div className="text-xs">
           <span>قام</span>
           <span>@{author} </span>
           <p className="inline">{description}</p>

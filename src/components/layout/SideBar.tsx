@@ -33,19 +33,13 @@ function SideBar({}: SideBarProps) {
   };
 
   return (
-    <div
-      className={`flex h-full min-w-[86px] flex-row py-6 ${
-        i18n.language === "ar"
-          ? "border-l-2 border-l-fulltek-sidebar-border"
-          : "border-r-2 border-r-fulltek-sidebar-border"
-      } `}
-    >
+    <div className={`flex h-full min-w-[86px] flex-row py-3`}>
       {/* //* Main SideBar */}
-      <div className="flex h-full min-h-screen w-[86px] flex-col items-center gap-4 px-6">
+      <div className="scrollbar-hide flex h-full min-h-screen w-[86px] flex-col items-center overflow-y-auto px-6">
         <SideBarElement title="" className="">
           <MainLogo />
         </SideBarElement>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-1">
           <SideBarElement title={t("Board")}>
             <Board />
           </SideBarElement>
@@ -76,11 +70,7 @@ function SideBar({}: SideBarProps) {
         </div>
         {/* <ImgVector /> */}
         <div className="flex h-12 w-12 justify-center overflow-hidden rounded-full border-[3px] border-fulltek-primary">
-          <img
-            src="../../../public/Man 1.png"
-            alt="Man1"
-            className="rounded object-cover"
-          />
+          <img src="./Man 1.png" alt="Man1" className="rounded object-cover" />
         </div>
       </div>
       {/* //* details section */}

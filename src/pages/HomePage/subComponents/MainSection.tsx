@@ -38,7 +38,7 @@ function MainSection({ activeTicket }: MainSectionProps) {
   }, []);
 
   return (
-    <div>
+    <div className="h-full max-h-full">
       <ResizablePanelGroup
         direction="horizontal"
         className="relative h-full w-full min-w-0 overflow-hidden"
@@ -52,7 +52,7 @@ function MainSection({ activeTicket }: MainSectionProps) {
           {/* The arrow button */}
           <button
             onClick={togglePanel}
-            className="/* Move slightly outside the handle */ absolute right-[-12px] top-24 z-50 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border bg-white shadow-md transition hover:bg-gray-100"
+            className="absolute right-[-12px] top-16 z-50 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border bg-white shadow-md transition hover:bg-gray-100"
           >
             {panelSize === minSize ? <RightArrow /> : <LeftArrow />}
           </button>
