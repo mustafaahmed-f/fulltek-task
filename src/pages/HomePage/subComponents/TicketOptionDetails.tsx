@@ -29,11 +29,13 @@ function TicketOptionDetails({}: TicketOptionDetailsProps) {
   }, [setFinalHeight]);
   return (
     <div
-      className="max-h-full min-w-0 max-w-[250px] overflow-x-hidden overflow-y-scroll scrollbar-hide"
-      style={{
-        height: finalHeight + 20,
-        // maxHeight: finalHeight + 20,
-      }}
+      className="h-screen max-h-screen min-w-0 max-w-[250px] overflow-x-hidden overflow-y-scroll scrollbar-hide"
+      style={
+        {
+          // height: finalHeight,
+          // maxHeight: finalHeight + 20,
+        }
+      }
     >
       <div className="mb-2 flex items-center gap-2 p-3 text-lg">
         <p className="">{t("ChronologicalRecords")}</p>

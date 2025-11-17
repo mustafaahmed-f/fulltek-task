@@ -18,5 +18,7 @@
   "NewestOrder": "Newest Order",
   "AM": "AM",
   "PM": "PM",
-  "ToChangeMission": "To change the mission"
+  "ToChangeMission": "To change the mission",
+  "FastRepleys": "Fast replies",
+  "CreateFromTemplate": "Create from template"
 }

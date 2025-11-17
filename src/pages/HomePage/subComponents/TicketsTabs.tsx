@@ -4,14 +4,11 @@ import SingleTab from "./SingleTab";
 import { useRef } from "react";
 import { useAtom } from "jotai";
 import { tabsHeightAtom } from "@/atoms/LayoutAtoms";
+import { CurrentTicketAtom } from "@/atoms/CurrentTicketAtom";
 
-interface TicketsTabsProps {
-  activeTicket: number;
-  setActiveTicket: React.Dispatch<React.SetStateAction<number>>;
-}
-
-function TicketsTabs({ activeTicket, setActiveTicket }: TicketsTabsProps) {
+function TicketsTabs() {
   const ticketsRef = useRef<HTMLDivElement>(null);
+  const [currentTicket, setCurrentTicket] = useAtom(CurrentTicketAtom);
   const [tabsHeight, setTabsHeight] = useAtom(tabsHeightAtom);
 
   if (ticketsRef.current) {
@@ -20,17 +17,17 @@ function TicketsTabs({ activeTicket, setActiveTicket }: TicketsTabsProps) {
   return (
     <div
       ref={ticketsRef}
-      className="scrollbar-hide flex w-full min-w-0 overflow-x-auto pe-2"
+      className="flex w-full min-w-0 overflow-x-auto pe-2 scrollbar-hide"
     >
       <div className="flex w-fit items-center border-b-2 border-b-white">
         {tickets.map((ticket) => (
           <SingleTab
             key={ticket.id}
             id={ticket.id}
-            isActive={activeTicket === Number(ticket.id)}
+            isActive={currentTicket === Number(ticket.id)}
             title={ticket.title}
             orderNumber={ticket.orderNumber}
-            setActiveTicket={setActiveTicket}
+            setActiveTicket={setCurrentTicket}
           />
         ))}
       </div>

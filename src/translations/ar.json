@@ -18,5 +18,7 @@
   "NewestOrder": "أحدث الطلبات",
   "AM": "ص",
   "PM": "م",
-  "ToChangeMission": "لتحوييل المهمة"
+  "ToChangeMission": "لتحوييل المهمة",
+  "FastRepleys": "ردود سريعة",
+  "CreateFromTemplate": "استدعاء من قالب"
 }

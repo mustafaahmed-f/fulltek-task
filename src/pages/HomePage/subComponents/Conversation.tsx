@@ -2,7 +2,9 @@ interface ConversationProps {}
 
 function Conversation({}: ConversationProps) {
   return (
-    <div className="p3 h-full w-full overflow-y-auto sm:p-5">conversation</div>
+    <div className="h-full w-full flex-1 overflow-y-auto p-3 scrollbar-hide sm:p-5">
+      conversation
+    </div>
   );
 }
 

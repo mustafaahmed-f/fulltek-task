@@ -35,7 +35,7 @@ export const AppLayout = () => {
   }, []);
 
   return (
-    <div className="flex max-h-screen min-h-screen flex-row flex-nowrap bg-background bg-fulltek-background">
+    <div className="flex h-full min-h-screen flex-row flex-nowrap bg-background bg-fulltek-background">
       <ResizablePanelGroup
         direction="horizontal"
         className="relative h-full w-full min-w-0 overflow-hidden"

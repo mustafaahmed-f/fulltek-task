@@ -35,7 +35,7 @@ function SideBar({}: SideBarProps) {
   return (
     <div className={`flex h-full min-w-[86px] flex-row py-3`}>
       {/* //* Main SideBar */}
-      <div className="scrollbar-hide flex h-full min-h-screen w-[86px] flex-col items-center overflow-y-auto px-6">
+      <div className="flex w-[86px] flex-col items-center px-6 scrollbar-hide">
         <SideBarElement title="" className="">
           <MainLogo />
         </SideBarElement>

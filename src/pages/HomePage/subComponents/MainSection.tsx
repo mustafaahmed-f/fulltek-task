@@ -10,11 +10,7 @@ import {
 import RightArrow from "@/icons/RightArrow";
 import LeftArrow from "@/icons/LeftArrow";
 
-interface MainSectionProps {
-  activeTicket: number;
-}
-
-function MainSection({ activeTicket }: MainSectionProps) {
+function MainSection() {
   const [defaultSize, setDefaultSize] = useState(Math.floor(pxToPercent(380)));
   const [minSize, setMinSize] = useState(Math.floor(pxToPercent(92)));
   const [panelSize, setPanelSize] = useState(defaultSize);
@@ -44,7 +40,7 @@ function MainSection({ activeTicket }: MainSectionProps) {
         className="relative h-full w-full min-w-0 overflow-hidden"
       >
         <ResizablePanel className="h-full w-full min-w-0">
-          <TicketConversation activeTicket={activeTicket} />
+          <TicketConversation />
         </ResizablePanel>
 
         <ResizableHandle />

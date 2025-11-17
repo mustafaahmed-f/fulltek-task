@@ -1,47 +1,50 @@
+import { CurrentTicketAtom } from "@/atoms/CurrentTicketAtom";
+import { useAtomValue } from "jotai";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { tickets } from "../utils/TicketsArray";
-import { CirclePlay, PlayIcon } from "lucide-react";
-import CheckIcon from "@/icons/CheckIcon";
-import ExpandIcon from "@/icons/ExpandIcon";
-import ThreeDotsIcon from "@/icons/ThreeDotsIcon";
+import { tickets as ticketsArray } from "../utils/TicketsArray";
 import Conversation from "./Conversation";
 import TextEditor from "./TextEditor";
+import TicketHeader from "./TicketHeader";
 
-interface TicketConversationProps {
-  activeTicket: number;
-}
-
-function TicketConversation({ activeTicket }: TicketConversationProps) {
+function TicketConversation() {
+  const [tickets, setTickets] = useState(ticketsArray);
   const { t } = useTranslation();
+  const activeTicket = useAtomValue(CurrentTicketAtom);
   const ticketDetails = tickets.find(
     (ticket) => ticket.id === String(activeTicket),
   );
 
+  const addMessage = (text: string) => {
+    setTickets((prev) =>
+      prev.map((t) =>
+        t.id === activeTicket
+          ? {
+              ...t,
+              messages: [
+                ...t.messages,
+                {
+                  sender: "محمد صفر",
+                  receiver: "راشد فهد",
+                  cc: ["ahmed@example.com", "rashedf@example.com"],
+                  avatar: "./man2.png",
+                  date: "2025-01-29",
+                  time: "10:00",
+                  timeType: "PM",
+                  message: text,
+                },
+              ],
+            }
+          : t,
+      ),
+    );
+  };
+
   return (
-    <div className="h-full flex-1">
-      <div className="mb-3 flex flex-col items-center p-3 max-sm:gap-y-3 sm:flex-row sm:justify-between sm:p-5">
-        <p className="text-lg font-semibold">{t(ticketDetails?.title)}</p>
-        <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
-          <div className="flex items-center gap-2">
-            <p>00:00:00</p>
-            <CirclePlay color="#7A8699" />
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="flex cursor-pointer items-center gap-1 rounded-lg border-2 border-[#7A8699] p-2">
-              <CheckIcon />
-              <p>{t("ToChangeMission")}</p>
-            </div>
-            <div className="cursor-pointer rounded-lg border-2 border-[#7A8699] p-3">
-              <ExpandIcon />
-            </div>
-            <div className="cursor-pointer rounded-lg border-2 border-[#7A8699] p-3">
-              <ThreeDotsIcon />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="flex h-full min-h-screen w-full flex-1 flex-col justify-between">
+      <TicketHeader ticketDetails={ticketDetails} />
       <Conversation />
-      <TextEditor />
+      <TextEditor onSend={addMessage} />
     </div>
   );
 }
