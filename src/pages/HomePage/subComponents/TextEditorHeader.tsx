@@ -35,15 +35,13 @@ function TextEditorHeader() {
     setRange(value);
   }
 
-  console.log("Scroll : ", scrollRef?.current?.scrollLeft);
-  console.log("Max : ", maxScroll);
   return (
     <div className="flex w-full flex-col items-start gap-3 max-sm:gap-1 sm:flex-row">
       <p className="mt-4 font-semibold text-[#7A8699]">{t("FastRepleys")}</p>
       <div className="flex w-full flex-1 flex-col gap-2 overflow-hidden pb-2">
         <div
           ref={scrollRef}
-          className="flex flex-1 flex-nowrap gap-1 overflow-x-auto rounded-xl bg-[#F7F8FA] px-2 py-2 scrollbar-hide"
+          className="flex flex-1 flex-nowrap gap-1 overflow-x-auto rounded-xl bg-[#F7F8FA] p-2 scrollbar-hide"
         >
           {fastReplies.map((repley, i) => (
             <div
