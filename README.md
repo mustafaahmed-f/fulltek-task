@@ -1,73 +1,74 @@
-# Welcome to your Lovable project
+# Zendesk-like Ticket Page
 
-## Project info
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-blue?logo=tailwindcss)
 
-**URL**: https://lovable.dev/projects/9dc27273-bbab-49b3-9560-ca924126a4e8
+A modern ticket management interface built with React, TypeScript, shadcn-ui, Tailwind CSS, and Jotai for state management.
 
-## How can I edit this code?
+## Table of Contents
 
-There are several ways of editing your application.
+- [Project Overview](#project-overview)
+- [Setup Instructions](#setup-instructions)
+- [How to Use](#how-to-use)
+- [Technologies](#technologies)
+- [Problems I faced](#problems-i-faced)
+- [Deployment](#deployment)
 
-**Use Lovable**
+## Project Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9dc27273-bbab-49b3-9560-ca924126a4e8) and start prompting.
+This is a Fulltek task project that recreates a Zendesk-like ticket page interface. The application features a responsive ticket management system with chat functionality, built using modern React patterns and styling frameworks.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Setup Instructions
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Follow these steps to get the project running locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173` (or the port displayed in your terminal).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## How to Use
 
-**Use GitHub Codespaces**
+- **View Tickets**: Browse through the ticket list with mock data
+- **Add Messages**: Type a message in the text input and click the "Send" button to add it to the chat container
+- **Drag Support**: Drag functionality is fully operational for ticket interactions
+- **Expand/Collapse**: Use the expand/collapse sections to view ticket details
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **shadcn-ui** - Component library
+- **Tailwind CSS** - Styling
+- **Jotai** - State management
 
-## How can I deploy this project?
+## Problems I faced
 
-Simply open [Lovable](https://lovable.dev/projects/9dc27273-bbab-49b3-9560-ca924126a4e8) and click on Share -> Publish.
+The following issues are currently present:
 
-## Can I connect a custom domain to my Lovable project?
+1. **Expand/Collapse Icons**: The expand/collapse icons don't function properly, though dragging works as expected.
+2. **Fast Replies Scrollbar**: The vertical scrollbar in the fast replies section of the text editor is not working. Horizontal scroll functions normally.
+3. **Text Editor**: Initially attempted to integrate Plate.js as the text editor but encountered installation errors. As a workaround, a simple textarea is currently used. This is acceptable for the current static implementation with mock data. Full message functionality is still operational.
 
-Yes, you can!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project is deployed on **Netlify**:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🚀 **Live Demo**: [https://your-netlify-deployment-url.netlify.app](https://your-netlify-deployment-url.netlify.app)
+
+Replace the URL above with your actual Netlify deployment link.
