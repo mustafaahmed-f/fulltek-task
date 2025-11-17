@@ -1,4 +1,5 @@
 export interface IMessage {
+  msgId: string;
   sender: string;
   receiver: string;
   cc?: string[];

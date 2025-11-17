@@ -11,7 +11,7 @@ interface TicketHeaderProps {
 function TicketHeader({ ticketDetails }: TicketHeaderProps) {
   const { t } = useTranslation();
   return (
-    <div className="mb-3 flex flex-col items-center p-3 max-sm:gap-y-3 sm:flex-row sm:justify-between sm:p-5">
+    <div className="flex flex-col items-center p-3 max-sm:gap-y-3 sm:flex-row sm:justify-between sm:p-5">
       <p className="text-lg font-semibold">{t(ticketDetails?.title)}</p>
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
         <div className="flex items-center gap-2">

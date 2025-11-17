@@ -12,7 +12,7 @@ function ArrowUp({}: ArrowUpProps) {
       <path
         d="M12.1543 6.5175L6.34417 0.707382L0.35367 6.70738"
         stroke="white"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
     </svg>
   );

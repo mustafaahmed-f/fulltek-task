@@ -14,9 +14,9 @@ function SmallSearchIcon({}: SmallSearchIconProps) {
         cy="3.56066"
         r="3.26167"
         stroke="#7A8699"
-        stroke-width="0.597973"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.597973"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="5.7949"
@@ -24,9 +24,9 @@ function SmallSearchIcon({}: SmallSearchIconProps) {
         x2="7.54652"
         y2="7.84913"
         stroke="#7A8699"
-        stroke-width="0.597973"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.597973"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

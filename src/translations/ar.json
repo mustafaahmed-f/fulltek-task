@@ -23,5 +23,6 @@
   "CreateFromTemplate": "استدعاء من قالب",
   "ReplyTo": "رد إلى",
   "AddReply": "إضافة رد",
-  "Cancle": "الغاء"
+  "Cancle": "الغاء",
+  "SentTo": "موجهة إلى"
 }

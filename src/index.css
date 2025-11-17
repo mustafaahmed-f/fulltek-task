@@ -145,3 +145,15 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 6px; /* center thumb on track */
   cursor: pointer;
 }
+
+.accordion-trigger > .shadcn-accordion-arrow {
+  display: none;
+}
+
+.accordion-item .lucide-chevron-down {
+  display: none;
+}
+
+.accordion-item button[data-state="open"] .toggleArrow {
+  rotate: 180deg;
+}

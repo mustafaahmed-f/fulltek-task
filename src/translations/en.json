@@ -23,5 +23,6 @@
   "CreateFromTemplate": "Create from template",
   "ReplyTo": "Reply to",
   "AddReply": "Add reply",
-  "Cancle": "Cancle"
+  "Cancle": "Cancle",
+  "SentTo": "Sent to"
 }

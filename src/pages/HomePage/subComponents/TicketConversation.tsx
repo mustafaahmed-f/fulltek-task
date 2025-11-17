@@ -24,6 +24,7 @@ function TicketConversation() {
               messages: [
                 ...t.messages,
                 {
+                  msgId: String(activeTicket) + String(t.messages.length + 1),
                   sender: "محمد صفر",
                   receiver: "راشد فهد",
                   cc: ["ahmed@example.com", "rashedf@example.com"],
@@ -43,7 +44,7 @@ function TicketConversation() {
   return (
     <div className="flex h-full min-h-screen w-full flex-1 flex-col justify-between">
       <TicketHeader ticketDetails={ticketDetails} />
-      <Conversation />
+      <Conversation ticketDetails={ticketDetails} />
       <TextEditor onSend={addMessage} />
     </div>
   );
